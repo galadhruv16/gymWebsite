@@ -64,4 +64,26 @@ const loginUser = async (req, res) => {
     }
   }
 
-module.exports = { registerUser, loginUser };
+  
+const getBlog = async (req,res) => {
+  try {
+    const { blogId } = req.params;
+    const blog = await BlogModel.findById(blogId).populate('creator').populate('comments.creator');
+    res.status(200).json({success:true,blog})
+  } catch (err) {
+    console.log(err)
+    res.status(500).json({message:"Some error occured while getting the blog."})
+  }
+}
+
+const getBlogs = async (req,res) => {
+  try {
+    const blogs = await BlogModel.find().populate('creator').populate('comments.creator');
+    res.status(200).json({success:true,blogs})
+  } catch (err) {
+    console.log(err)
+    res.status(500).json({message:"Some error occured while getting the blogs."})
+  }
+}
+
+module.exports = { registerUser, loginUser, getBlog, getBlogs };

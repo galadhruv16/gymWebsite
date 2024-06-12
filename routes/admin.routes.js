@@ -1,15 +1,15 @@
 const {Router} = require('express');
-const { createBlog, likeBlog, commentBlog, replyComment, getBlog, getBlogs, updateBlog, deleteBlog } = require('../controllers/admin.controller');
+const { checkIfAdmin } = require('../middlewares/user.middleware');
+const { createBlog, likeBlog, commentBlog, replyComment, editComment, updateBlog, deleteBlog } = require('../controllers/admin.controller');
 
 const router = Router();
 
-router.post('/postBlog', createBlog);
-router.patch('/updateBlog/:blogId', updateBlog);
-router.delete('/deleteBlog/:blogId', deleteBlog);
-router.get('/getBlogs', getBlogs);
-router.get('/getBlog/:blogId', getBlog);
-router.post('/likeBlog/:blogId', likeBlog);
-router.post('/commentBlog/:blogId', commentBlog);
-router.post('/replyComment/:commentId', replyComment);
+router.post('/postBlog', checkIfAdmin, createBlog);
+router.patch('/:blogId/updateBlog', checkIfAdmin, updateBlog);
+router.delete('/:blogId/deleteBlog', checkIfAdmin, deleteBlog);
+router.post('/:blogId/likeBlog', checkIfAdmin, likeBlog);
+router.post('/:blogId/commentBlog', checkIfAdmin, commentBlog);
+router.post('/:commentId/replyComment', checkIfAdmin, replyComment);
+router.patch('/:commentId/editComment', checkIfAdmin, editComment);
 
 module.exports = router;

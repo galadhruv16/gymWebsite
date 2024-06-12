@@ -23,4 +23,14 @@ const generateToken = (user) => {
     return decodedToken.id;
   };
 
-  module.exports = { generateToken, getLoggedInUserId };
+  const getLoggedInUserRole = (req) => {
+    const token = req.headers.cookie.split("=")[1];
+    if (!token) {
+      throw new Error("User not authenticated");
+    }
+    const decodedToken = jwt.verify(token, process.env.JWT_SECRET);
+    console.log(decodedToken)
+    return decodedToken.role;
+  }
+
+  module.exports = { generateToken, getLoggedInUserId, getLoggedInUserRole };

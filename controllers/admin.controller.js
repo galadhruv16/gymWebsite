@@ -42,6 +42,28 @@ const likeBlog = async (req,res) => {
   }
 }
 
+const unlikeBlog = async (req,res) => {
+  try {
+    const blogId = req.params.blogId;
+    const userId = getLoggedInUserId(req);
+
+    const blog = await BlogModel.findById(blogId);
+    const user = await UserModel.findById(userId);
+
+    if (user.likedPosts.includes(blogId)) {
+      blog.likes -= 1;
+      user.likedPosts = user.likedPosts.filter((id) => id !== blogId);
+      await blog.save();
+      await user.save();
+    }
+
+    res.status(200).json({success:true,message:"Unliked the blog successfully"})
+  } catch (err) {
+    console.log(err);
+    res.status(500).json({message: " Some Error Occcured while unliking the Post "})
+  }
+}
+
 const commentBlog = async (req,res) => {
     try {
       const { blogId,commentContent } = req.body;
@@ -70,16 +92,6 @@ const commentBlog = async (req,res) => {
     }
   }
 
-const editComment = async (req,res) => {
-  try {
-    const commentId = req.params.commentId;
-    const { commentContent } = req.body;
-  } catch (error) {
-    console.log(error)
-    res.status(500).json({success:false, message:"Some Error Occured while editing the comment."})
-  }
-}
-
 const replyComment = async (req,res) => {
   const { commentId,replyContent } = req.body;
   try {
@@ -103,26 +115,30 @@ const replyComment = async (req,res) => {
   }
 }
 
-  const getBlog = async (req,res) => {
-    try {
-      const { blogId } = req.params;
-      const blog = await BlogModel.findById(blogId).populate('creator').populate('comments.creator');
-      res.status(200).json({success:true,blog})
-    } catch (err) {
-      console.log(err)
-      res.status(500).json({message:"Some error occured while getting the blog."})
-    }
+const editComment = async (req,res) => {
+  try {
+    const commentId = req.params.commentId;
+    const { commentContent } = req.body;
+    const comment = await CommentModel.findById(commentId);
+    comment.content = commentContent;
+    await comment.save();
+    res.status(200).json({success:true,message:"Comment edited successfully."})
+  } catch (error) {
+    console.log(error)
+    res.status(500).json({success:false, message:"Some Error Occured while editing the comment."})
   }
+}
 
-  const getBlogs = async (req,res) => {
-    try {
-      const blogs = await BlogModel.find().populate('creator').populate('comments.creator');
-      res.status(200).json({success:true,blogs})
-    } catch (err) {
-      console.log(err)
-      res.status(500).json({message:"Some error occured while getting the blogs."})
-    }
+const deleteComment = async (req,res) => {
+  try {
+    const commentId = req.params.commentId;
+    await CommentModel.findByIdAndDelete(commentId);
+    res.status(200).json({success:true,message:"Comment deleted successfully."})
+  } catch (err) {
+    console.log(err)
+    res.status(500).json({message:"Some error occured while deleting the comment."})
   }
+}
 
   const updateBlog = async (req,res) => {
     try {
@@ -157,10 +173,11 @@ const replyComment = async (req,res) => {
   module.exports = {
     createBlog,
     likeBlog,
+    unlikeBlog,
     commentBlog,
     replyComment,
-    getBlog,
-    getBlogs,
+    editComment,
+    deleteComment,
     updateBlog,
     deleteBlog
   };
