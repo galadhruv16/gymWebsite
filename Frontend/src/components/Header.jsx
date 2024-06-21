@@ -9,12 +9,12 @@ const Header = () => {
           <p>CERTIFIED FITNESS TRAINER </p>
         </div>
         <div>
-          <nav className="bg-violet-950 mt-8 ml-[690px] rounded-md" >
+          <nav className="bg-violet-950 text-sm mt-8 ml-[690px] rounded-md" >
             <ul className="flex">
-              <li className="p-3">Plans</li>
-              <li className="p-3">Blogs</li>
-              <li className="p-3">Challenges</li>
-              <li className="p-3">Login</li>
+              <li className="p-4">Plans</li>
+              <li className="p-4">Blogs</li>
+              <li className="p-4">Challenges</li>
+              <li className="p-4">Login</li>
             </ul>
           </nav>
         </div>
