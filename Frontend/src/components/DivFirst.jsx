@@ -5,7 +5,7 @@ import abschallenge from "../assets/abschallenge.webp";
 const DivFirst = () => {
   return (
     <div>
-      <div className="absolute  mt-32 px-9">
+      <div className="sm:absolute  sm:mt-32 sm:px-9">
         <div className="text-5xl text-white">
           <p>IT DOESN'T GET EASIER</p>
           <p>YOU GET BETTER</p>
@@ -15,7 +15,7 @@ const DivFirst = () => {
             VIEW PLANS
           </button>
         </div>
-        <div className="flex py-20 ">
+        <div className="sm:flex py-20 ">
           <div className="w-52 ">
             <img src={upperchallenge} alt="upperchallenge" />
             <div className="bg-violet-950 opacity-60 pb-16">
@@ -28,7 +28,7 @@ const DivFirst = () => {
               JOIN
             </button>
           </div>
-          <div className="w-52 mx-4">
+          <div className="w-52 sm:mx-4">
             <img src={movchallenge} alt="movchallenge" />
             <div className="bg-violet-950 opacity-60 pb-16">
               <p className="text-lg px-4 pt-4 text-white font-bold">
