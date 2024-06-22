@@ -4,7 +4,7 @@ const DivThird = () => {
   return (
     <div className="sm:grid sm:grid-flow-col sm:my-40 ">
       <div>
-        <img className="sm:w-[60vw] " src={hppg01} alt="BMIimg" />
+        <img className="sm:w-[50vw] " src={hppg01} alt="BMIimg" />
       </div>
       <div className="">
         <div>

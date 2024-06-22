@@ -5,6 +5,8 @@ import Header from "./Header.jsx";
 import DivFirst from "./DivFirst.jsx";
 import DivSecond from "./DivSecond.jsx";
 import DivThird from "./DivThird.jsx";
+import DivFourth from "./DivFourth.jsx";
+import DivFifth from "./DivFifth.jsx";
 
 const Body = () => {
   return (
@@ -12,10 +14,12 @@ const Body = () => {
       <div>
         <Header />
       </div>
-      <DivFirst  />
+      <DivFirst />
       <img className="sm:object-fill" src={hppg02} alt="pagebg" />
-      <DivSecond  />
+      <DivSecond />
       <DivThird />
+      <DivFourth />
+      <DivFifth />
     </div>
   );
 };
