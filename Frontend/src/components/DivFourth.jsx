@@ -42,7 +42,7 @@ const DivFourth = () => {
         </div>
       </div>
       <div className="grid my-10">
-        <button className="mx-auto left-0 right-0 text-center bg-violet-950 text-white  py-1 border  px-16 rounded-md">
+        <button className="mx-auto left-0 right-0 text-center bg-violet-950 text-white  py-3 border  px-16 rounded-md">
           READ ALL
         </button>
       </div>

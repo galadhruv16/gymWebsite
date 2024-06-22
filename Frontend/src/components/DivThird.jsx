@@ -62,7 +62,7 @@ const DivThird = () => {
               />
             </div>
             <div>
-              <button className="bg-violet-900 text-white mt-16 py-1 w-2/6 rounded-md">
+              <button className="bg-violet-900 text-white mt-16 py-2 w-2/6 rounded-md">
                 Calculate
               </button>
               </div>
