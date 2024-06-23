@@ -3,7 +3,7 @@ import GetInTouch from "../assets/GetInTouch.jpg";
 const DivFifth = () => {
   return (
     <div>
-      <div className="grid grid-flow-col w-full">
+      <div className="grid grid-flow-col w-full h-full">
         <div className="w-[55vw] ">
           <div className="mx-[20%] my-12 ">
             <p className="text-5xl text-violet-950 font-bold">GET IN TOUCH</p>
@@ -38,18 +38,17 @@ const DivFifth = () => {
                 className="border w-[92%] border-gray-300 rounded-md py-1"
               />
             </div>
-            <div className="my-4  grid">
+            <div className="my-4 h-full grid">
               <label className="text-gray-600">Message</label>
-              <input
-                type="text"
-                name="Email"
-                className="border w-[92%] border-gray-300 rounded-md py-[10%]"
+              <textarea
+                name="message"
+                className="border h-32 p-3 w-[92%] border-gray-300 active:border-gray-300 outline-none rounded-md"
               />
             </div>
             <div>
-                <button className="bg-violet-950 text-white my-4 py-2 px-[15%] rounded-md">
-                    Submit
-                </button>
+              <button className="bg-violet-950 text-white my-4 py-2 px-[15%] rounded-md">
+                Submit
+              </button>
             </div>
           </div>
         </div>

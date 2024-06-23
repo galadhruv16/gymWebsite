@@ -1,18 +1,24 @@
 import React from "react";
-
+import { Link } from "react-router-dom";
 const Header = () => {
   return (
     <div>
-      <div className="grid grid-flow-col 	  sm:absolute text-white z-10">
-        <div className="bg-violet-950 p-3 m-6  rounded-md">
-          <p>SHASHANK —— </p>
-          <p>CERTIFIED FITNESS TRAINER </p>
+      <div className="w-full flex justify-between items-center py-6 px-2 sm:px-10 sm:pr-16 absolute top-0 left-0 text-white z-10">
+        <div className="bg-violet-950/90 sm:text-base text-sm p-5 sm:p-3 rounded ">
+          <p>
+            SHASHANK —— <br />
+            CERTIFIED FITNESS TRAINER
+          </p>
         </div>
 
-        <div className="bg-violet-950 text-sm sm:ml-[54vw]  m-8 rounded-md ">
+        <div className="bg-violet-950/90 sm:block hidden text-sm rounded-md ">
           <ul className="flex ">
-            <li className="p-4 ">Plans</li>
-            <li className="p-4">Blogs</li>
+            <Link to="/plans">
+              <li className="p-4 ">Plans</li>
+            </Link>
+            <Link to="/blogs">
+              <li className="p-4">Blogs</li>
+            </Link>
             <li className="p-4">Challenges</li>
             <li className="p-4">Login</li>
           </ul>
