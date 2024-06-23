@@ -2,9 +2,11 @@ import React from "react";
 import upperchallenge from "../assets/upperchallenge.webp";
 import movchallenge from "../assets/movchallenge.webp";
 import abschallenge from "../assets/abschallenge.webp";
+import Header from "./Header";
 const DivFirst = () => {
   return (
     <div>
+      <Header />
       <div className="sm:absolute  sm:mt-32 sm:px-9">
         <div className="text-5xl text-white">
           <p>IT DOESN'T GET EASIER</p>

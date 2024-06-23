@@ -11,11 +11,11 @@ import DivFifth from "./DivFifth.jsx";
 const Body = () => {
   return (
     <div>
-      <div>
-        <Header />
-      </div>
+      
+        
+      
       <DivFirst />
-      <img className="sm:object-fill" src={hppg02} alt="pagebg" />
+      <img className="sm:object-cover " src={hppg02} alt="pagebg" />
       <DivSecond />
       <DivThird />
       <DivFourth />

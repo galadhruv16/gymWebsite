@@ -5,7 +5,7 @@ import DiabetesBGrem from "../assets/DiabetesBGrem.jpg";
 import OnlineBGrem from "../assets/OnlineBGrem.jpg";
 const DivSecond = () => {
   return (
-    <div>
+    <div className="">
       <div>
         <p className="ml-auto text-right mt-8 mr-16 font-bold text-violet-950 text-4xl">
           YOUR HEALTH IS JUST
