@@ -4,34 +4,38 @@ import checkMark from "../assets/checkMark.svg";
 import { Link } from "react-router-dom";
 const PlansPageCards = () => {
   return (
-    <div className="flex bg-gray-300 m-6 rounded-lg">
+    <div className="flex bg-gray-300 sm:m-6 my-4 mx-1  rounded-lg">
       <div>
-        <img src={Plan1} alt="" className="rounded-lg w-72" />
+        <img src={Plan1} alt="" className="rounded-lg sm:w-72 " />
       </div>
-      <div className="my-3 mx-8">
-        <p className="font-bold text-xl my-3 text-violet-950 ">
+      <div className="sm:my-3 sm:mx-8">
+        <p className="font-bold sm:text-xl sm:my-3 text-violet-950 ">
           Fitness & Nutrition Coaching
         </p>
         <div className="text-violet-950 font-semibold">
-          <p className="flex ">
-            <img className="w-5 mx-2" src={checkMark} alt="" />
+          <p className="flex sm:text-base text-sm">
+            <img className="sm:w-5 w-4 mx-2" src={checkMark} alt="" />
             Personalised Diet and Workout plans
           </p>
-          <p className="flex">
-            <img className="w-5 mx-2" src={checkMark} alt="" />
+          <p className="flex sm:text-base text-sm">
+            <img className="sm:w-5 w-4 mx-2 " src={checkMark} alt="" />
             Weekly Monitoring
           </p>
-          <p className="flex">
-            <img className="w-5 mx-2" src={checkMark} alt="" />
+          <p className="flex sm:text-base text-sm">
+            <img
+              className="sm:w-5 w-4 mx-2 "
+              src={checkMark}
+              alt=""
+            />
             Continuous Support
           </p>
         </div>
-        <div className="mx-3 flex my-5">
-          <p className="font-bold text-lg">₹</p>
-          <p className="font-semibold text-5xl">4499</p>
+        <div className="sm:mx-3 flex sm:my-5">
+          <p className="font-bold sm:text-lg">₹</p>
+          <p className="font-semibold sm:text-5xl">4499</p>
         </div>
         <Link to="/plans/1">
-          <button className="bg-violet-950 px-16 text-white p-3 rounded-md">
+          <button className="bg-violet-950 sm:px-16 text-white sm:p-3 text-sm sm:text-base rounded-md">
             DETAILS
           </button>
         </Link>

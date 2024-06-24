@@ -24,7 +24,7 @@ const Plans = () => {
           </div>
         </div>
       </div>
-      <div className="grid grid-cols-2 ">
+      <div className="sm:grid sm:grid-cols-2">
         <PlansPageCards />
         <PlansPageCards />
         <PlansPageCards />
