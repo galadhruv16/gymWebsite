@@ -16,12 +16,12 @@ const DivFirst = () => {
             <p>YOU GET BETTER</p>
           </div>
           <div>
-            <button className="text-white mt-8 border border-white py-2 px-3 rounded-md">
+            <button className="text-white mt-8 border border-white py-2 mb-6 px-3 rounded-md">
               VIEW PLANS
             </button>
           </div>
         </div>
-        <div className="flex sm:py-10 py-48 sm:mt-24 sm:flex-row flex-col gap-4 items-center">
+        <div className="flex sm:flex-row gap-6 my-16 items-center">
           {/* {plans.map((plan) => (
             <PlanCards />
           ))} */}
