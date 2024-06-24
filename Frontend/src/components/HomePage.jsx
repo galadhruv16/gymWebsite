@@ -21,7 +21,7 @@ const DivFirst = () => {
             </button>
           </div>
         </div>
-        <div className="flex sm:py-10 py-48 sm:flex-row flex-col gap-4 items-center">
+        <div className="flex sm:py-10 py-48 sm:mt-24 sm:flex-row flex-col gap-4 items-center">
           {/* {plans.map((plan) => (
             <PlanCards />
           ))} */}

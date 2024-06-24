@@ -14,13 +14,13 @@ const Header = () => {
         <div className="bg-violet-950/90 sm:block hidden text-sm rounded-md ">
           <ul className="flex ">
             <Link to="/plans">
-              <li className="p-4 ">Plans</li>
+              <li className="p-5 ">Plans</li>
             </Link>
             <Link to="/blogs">
-              <li className="p-4">Blogs</li>
+              <li className="p-5">Blogs</li>
             </Link>
-            <li className="p-4">Challenges</li>
-            <li className="p-4">Login</li>
+            <li className="p-5">Challenges</li>
+            <li className="p-5">Login</li>
           </ul>
         </div>
       </div>
