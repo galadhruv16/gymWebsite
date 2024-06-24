@@ -3,6 +3,7 @@ import React from "react";
 import FitBGrem from "../assets/FitBGrem.jpg";
 import DiabetesBGrem from "../assets/DiabetesBGrem.jpg";
 import OnlineBGrem from "../assets/OnlineBGrem.jpg";
+import { Link } from "react-router-dom";
 const DivSecond = () => {
   return (
     <div className="">
@@ -26,7 +27,7 @@ const DivSecond = () => {
           <p className="text-center text-violet-950 ">
             right diet and workouts
           </p>
-          <button className="text-center text-lg py-1 border border-violet-950 px-20 my-6 rounded-lg">Details</button>
+          <Link to="/plans"><button className="text-center text-lg py-1 border border-violet-950 px-20 my-6 rounded-lg">Details</button></Link>
         </div>
         <div className="text-center shadow-md">
           <img className="w-80  " src={OnlineBGrem} alt="FitnessNutrition" />
@@ -36,8 +37,7 @@ const DivSecond = () => {
           <p className="text-center text-violet-950 ">
             1-on-1 online sessions for Yoga,
           </p>
-          <p className="text-center text-violet-950 ">Zumba & more ! </p>
-          <button className="text-center text-lg py-1 border border-violet-950 px-20 my-6 rounded-lg">Details</button>
+          <Link to="/plans"><button className="text-center text-lg py-1 border border-violet-950 px-20 my-6 rounded-lg">Details</button></Link>
         </div>
         <div className="text-center shadow-md">
           <img className="w-80 " src={DiabetesBGrem} alt="FitnessNutrition" />
@@ -48,7 +48,7 @@ const DivSecond = () => {
             Manage diabetes & explore reversal{" "}
           </p>
           <p className="text-center text-violet-950 ">under qualified coach </p>
-          <button className="text-center text-lg py-1 border border-violet-950 px-20 my-6 rounded-lg">Details</button>
+          <Link to="/plans"><button className="text-center text-lg py-1 border border-violet-950 px-20 my-6 rounded-lg">Details</button></Link>
         </div>
       </div>
     </div>
