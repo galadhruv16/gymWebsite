@@ -1,8 +1,10 @@
 import React from 'react'
 import Blog1 from '../assets/Blog1.jpg'
+import { Link } from 'react-router-dom'
 const HomeBlogTiles = () => {
   return (
     <div>
+      <Link to="/blogs/:resid">
       <div className="w-80 mx-10">
           <img src={Blog1} alt="Blogpic" className="rounded-md" />
           <div class="sm:absolute sm:-my-0 -my-[40%] mb-2 w-80 sm:bottom-0 z-10 text-white p-2">
@@ -13,6 +15,7 @@ const HomeBlogTiles = () => {
             </p>
           </div>
         </div>
+        </Link>
     </div>
   )
 }

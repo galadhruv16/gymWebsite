@@ -2,6 +2,7 @@ import React from "react";
 import Header from "./Header";
 import PlanCards from "./PlanCards";
 import { useGetPlans } from "../hooks/useGetPlans";
+import { Link } from "react-router-dom";
 const DivFirst = () => {
   const { plans, loading } = useGetPlans();
   console.log(plans);
@@ -17,7 +18,9 @@ const DivFirst = () => {
           </div>
           <div>
             <button className="text-white mt-8 border border-white py-2 mb-6 px-3 rounded-md">
+              <Link to="/plans">
               VIEW PLANS
+              </Link>
             </button>
           </div>
           

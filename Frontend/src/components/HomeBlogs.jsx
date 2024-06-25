@@ -3,6 +3,7 @@ import Blog1 from "../assets/Blog1.jpg";
 import Blog2 from "../assets/Blog2.jpg";
 import Blog3 from "../assets/Blog3.jpg";
 import HomeBlogTiles from "./HomeBlogTiles";
+import { Link } from "react-router-dom";
 const DivFourth = () => {
   return (
     <div>
@@ -16,8 +17,10 @@ const DivFourth = () => {
         <HomeBlogTiles />
       </div>
       <div className="grid my-10">
+        
         <button className="mx-auto left-0 right-0 text-center bg-violet-950 text-white  py-3 border  px-16 rounded-md">
-          READ ALL
+          <Link to="/blogs">READ ALL</Link>
+          
         </button>
       </div>
     </div>
