@@ -1,16 +1,18 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import BurgerMenu from "./BurgerMenu";
 const Header = () => {
   return (
     <div>
-      <div className="w-full flex justify-between items-center py-6 px-2 sm:px-10 sm:pr-16 absolute top-0 left-0 text-white z-10">
-        <div className="bg-violet-950/90 sm:text-base text-sm p-5 sm:p-3 rounded ">
+      <div className="w-full flex justify-between items-center py-3 px-2 sm:px-10 sm:pr-16 absolute top-0 left-0 text-white z-10">
+        <div className="bg-violet-950/90 sm:text-base text-sm p-2 sm:p-3 rounded ">
           <p>
             SHASHANK —— <br />
             CERTIFIED FITNESS TRAINER
           </p>
         </div>
 
+          <span className="sm:hidden block"><BurgerMenu /></span>
         <div className="bg-violet-950/90 sm:block hidden text-sm rounded-md ">
           <ul className="flex ">
             <Link to="/plans">

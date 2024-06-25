@@ -20,11 +20,10 @@ const DivFirst = () => {
               VIEW PLANS
             </button>
           </div>
+          
         </div>
-        <div className="flex sm:flex-row flex-col gap-6 my-16 items-center">
-          {/* {plans.map((plan) => (
-            <PlanCards />
-          ))} */}
+        <div className="sm:flex sm:flex-row hidden flex-col gap-6 my-16 items-center">
+          
           <PlanCards />
           <PlanCards />
           <PlanCards />

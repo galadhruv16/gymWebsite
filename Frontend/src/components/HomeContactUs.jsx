@@ -3,14 +3,17 @@ import GetInTouch from "../assets/GetInTouch.jpg";
 const DivFifth = () => {
   return (
     <div>
-      <div className="grid grid-flow-col w-full h-full">
-        <div className="w-[55vw] ">
-          <div className="mx-[20%] my-12 ">
-            <p className="text-5xl text-violet-950 font-bold">GET IN TOUCH</p>
-            <p className="m-1 text-gray-500 font-semibold">
+      <div className="grid grid-flow-row items-center sm:grid-flow-col ">
+        <div>
+          <img className="w-[80%] mx-auto left-0 right-0 sm:hidden block" src={GetInTouch} alt="GetInTouch" />
+        </div>
+        <div className="sm:w-[55vw] mx-auto left-0 right-0 ">
+          <div className="sm:mx-[20%] my-5  sm:my-12 ">
+            <p className="sm:text-5xl text-4xl text-violet-950 font-bold">GET IN TOUCH</p>
+            <p className="sm:m-1 text-gray-500 font-semibold">
               Got Questions? Just contact me below{" "}
             </p>
-            <div className="grid grid-flow-col mt-8">
+            <div className="grid grid-flow-col sm:gap-4 mt-4 sm:mt-8">
               <div className="grid ">
                 <label className="text-gray-600">First Name</label>
                 <input
@@ -20,7 +23,7 @@ const DivFifth = () => {
                 />
               </div>
               <div>
-                <div className="grid mx-8 ">
+                <div className="grid ml-2 sm:ml-0 sm:mx-8 ">
                   <label className="text-gray-600">Last Name</label>
                   <input
                     type="text"
@@ -53,7 +56,7 @@ const DivFifth = () => {
           </div>
         </div>
         <div>
-          <img className="w-[45vw]" src={GetInTouch} alt="GetInTouch" />
+          <img className="w-[45vw] hidden sm:block" src={GetInTouch} alt="GetInTouch" />
         </div>
       </div>
     </div>
